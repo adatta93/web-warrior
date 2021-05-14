@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(
+    at top left,
+    rgba(146, 43, 225, 1) 0%,
+    rgba(43, 9, 107, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px 20px;
+}
+
+nav .links {
+  display: none;
+  text-align: right;
+}
+
+nav .links.open {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  position: absolute;
+  top: 68px;
+  text-align: center;
+  background: radial-gradient(
+    at top left,
+    rgba(146, 43, 225, 1) 0%,
+    rgba(43, 9, 107, 1) 100%
+  );
+  border-radius: 15px;
+  box-shadow: 0 0 8px 0;
+  z-index: 99;
+  padding: 15px 0 7px 0;
+}
+
+nav .hamburger {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .hamburger svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  border-color: white;
+}
+
+.content {
+  padding: 0 20px;
+}
+
+footer p {
+  text-align: center;
+  color: #bbb;
+  margin: 40px auto;
+}
+
+@media only screen and (min-width: 600px) {
+  nav .links {
+    display: inline-block;
+  }
+
+  nav .hamburger {
+    display: none;
+  }
+}
